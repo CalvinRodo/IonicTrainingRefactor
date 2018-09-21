@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 
-export class IconMapServices {
+export class IconMapService {
   sunny = 'assets/images/sunny.png';
   cloudy = 'assets/images/cloudy.png';
   lightRain = 'assets/images/light-rain.png';
