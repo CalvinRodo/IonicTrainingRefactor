@@ -3,16 +3,16 @@ import { RouterModule } from '@angular/router';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ContactPage } from './contact.page';
+import { ForecastPage } from './forecast.page';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: ContactPage }]),
+    RouterModule.forChild([{ path: '', component: ForecastPage }]),
   ],
-  declarations: [ContactPage],
+  declarations: [ForecastPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class ContactPageModule {}
+export class ForecastModule {}

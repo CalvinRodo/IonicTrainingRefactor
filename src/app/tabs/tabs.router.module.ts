@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
-import { HomePage } from '../home/home.page';
-import { AboutPage } from '../about/about.page';
-import { ContactPage } from '../contact/contact.page';
+import { CurrentWeatherPage } from '../current-weather/current-weather.page';
+import { ForecastPage } from '../forecast/forecast.page';
+import { UVIndexPage } from '../uv-index/uv-index.page';
 
 const routes: Routes = [
   {
@@ -13,29 +13,29 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/tabs/(home:home)',
+        redirectTo: '/tabs/(current-weather:current-weather)',
         pathMatch: 'full',
       },
       {
-        path: 'home',
-        outlet: 'home',
-        component: HomePage
+        path: 'current-weather',
+        outlet: 'current-weather',
+        component: CurrentWeatherPage
       },
       {
-        path: 'about',
-        outlet: 'about',
-        component: AboutPage
+        path: 'forecast',
+        outlet: 'forecast',
+        component: ForecastPage
       },
       {
-        path: 'contact',
-        outlet: 'contact',
-        component: ContactPage
+        path: 'uv-index',
+        outlet: 'uv-index',
+        component: UVIndexPage
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/(home:home)',
+    redirectTo: '/tabs/(current-weather:current-weather)',
     pathMatch: 'full'
   }
 ];

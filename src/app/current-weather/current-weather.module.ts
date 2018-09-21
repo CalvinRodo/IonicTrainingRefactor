@@ -3,16 +3,16 @@ import { RouterModule } from '@angular/router';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AboutPage } from './about.page';
+import { CurrentWeatherPage } from './current-weather.page';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: AboutPage }]),
+    RouterModule.forChild([{ path: '', component: CurrentWeatherPage }]),
   ],
-  declarations: [AboutPage],
+  declarations: [CurrentWeatherPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AboutPageModule {}
+export class CurrentWeatherModule {}
