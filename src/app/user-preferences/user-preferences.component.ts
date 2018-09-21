@@ -32,5 +32,6 @@ export class UserPreferencesComponent implements OnInit {
   save() {
     this.userPreferences.setCity(this.city);
     this.userPreferences.setUseCelcius(this.useCelcius);
+    this.modal.dismiss();
   }
 }

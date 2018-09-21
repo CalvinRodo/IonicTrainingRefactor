@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { UVIndex } from '../models/uv-index';
 import { ModalController } from '@ionic/angular';
 
@@ -13,7 +13,7 @@ import { WeatherService } from '../services/weather/weather.service';
   templateUrl: 'uv-index.page.html',
   styleUrls: ['uv-index.page.scss'],
 })
-export class UVIndexPage {
+export class UVIndexPage implements OnInit, OnDestroy{
   uvIndex: UVIndex;
 
   advice: Array<string> = [
@@ -41,7 +41,7 @@ export class UVIndexPage {
     private weather: WeatherService
   ) {}
 
-  ionViewDidLoad() {
+  ngOnInit() {
     this.subscription = this.userPreferences.changed.subscribe(() =>
       this.getData()
     );
@@ -51,7 +51,7 @@ export class UVIndexPage {
     this.getData();
   }
 
-  ionViewWillUnload() {
+  ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 
