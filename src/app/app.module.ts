@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-//import { Pro } from '@ionic/pro';
+// import { Pro } from '@ionic/pro';
 import { IonicStorageModule } from '@ionic/storage';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -12,15 +12,18 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserPreferencesComponent } from './user-preferences/user-preferences.component';
+import { FormsModule } from '@angular/forms';
 
 // Pro.init('1ec81629', {
 //   appVersion: '0.0.1'
 // });
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, UserPreferencesComponent],
+  entryComponents: [UserPreferencesComponent],
   imports: [
+    FormsModule,
     HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(),
